@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="PatchServe/PatchServe.csproj" />
+  <Project Path="PatchServeDemo/PatchServeDemo.csproj">
+    <Platform Project="x64" />
+    <Deploy />
+  </Project>
+</Solution>

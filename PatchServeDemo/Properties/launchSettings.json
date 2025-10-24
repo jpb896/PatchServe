@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PatchServeDemo (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PatchServeDemo (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
