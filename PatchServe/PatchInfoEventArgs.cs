@@ -19,14 +19,14 @@ namespace PatchServe
         [XmlElement("url")]
         public string DownloadUri
         {
-            get => GetUri(PatchServe.BaseUri, _downloadUri);
+            get => GetUri(Updater.BaseUri, _downloadUri);
             set => _downloadUri = value;
         }
 
         [XmlElement("changelogurl")]
         public string ChangelogUri
         {
-            get => GetUri(PatchServe.BaseUri, _changelogUri);
+            get => GetUri(Updater.BaseUri, _changelogUri);
             set => _changelogUri = value;
         }
 
