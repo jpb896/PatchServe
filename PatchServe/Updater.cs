@@ -1,9 +1,10 @@
-﻿using Microsoft.ML.OnnxRuntime;
+﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Net;
 using System.Net.Cache;
-using System.Net.Http;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace PatchServe
 {
@@ -36,8 +37,8 @@ namespace PatchServe
             }
 
             string registryLocation = !string.IsNullOrEmpty(appCompany)
-                ? $@"Software\{appCompany}\{AppTitle}\AutoUpdater"
-                : $@"Software\{AppTitle}\AutoUpdater";
+                ? $@"Software\{appCompany}\{AppTitle}\PatchInstaller"
+                : $@"Software\{AppTitle}\PatchInstaller";
 
             PatchInfoEventArgs args;
             string xml = null;
@@ -78,6 +79,12 @@ namespace PatchServe
                 webClient.Headers[HttpRequestHeader.UserAgent] = UserAgent;
 
             return webClient;
+        }
+
+        public static void ShowUpdateDialog()
+        {
+            PatchDownload updateWindow = new PatchDownload();
+            updateWindow.Activate();
         }
     }
 }
